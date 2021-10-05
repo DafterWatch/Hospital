@@ -1,0 +1,20 @@
+<div id="loginCss">
+    <mat-card class="example-card">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>Hospital</mat-card-title>
+          <mat-card-subtitle>Citas Confirmadas</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <p>Citas confirmadas</p>
+          <div style="width: 100%;" *ngFor="let cita of citasMedicas">
+            <mat-list>
+                <mat-list-item>{{"Paciente: "+cita.nombrePaciente + " en la fecha: " +cita.fecha}}</mat-list-item>
+            </mat-list>
+          </div>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button (click)="volverLogin()">Regresar Inicio de Sesion</button>
+        </mat-card-actions>
+    </mat-card>
+</div>

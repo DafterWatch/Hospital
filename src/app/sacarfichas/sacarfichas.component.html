@@ -1,0 +1,47 @@
+<div id="loginCss">
+    <mat-card class="example-card">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>Hospital</mat-card-title>
+          <mat-card-subtitle>Registro de citas medicas</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <p>Fecha de la cita</p>
+          <div style="width: 100%;">
+            <mat-form-field appearance="fill" class="example-form-field">
+              <mat-label>Seleccione la fecha</mat-label>
+              <input matInput [matDatepicker]="datepicker" (dateInput)="fechaCita($event)">
+              <mat-datepicker-toggle matSuffix [for]="datepicker"></mat-datepicker-toggle>
+              <mat-datepicker #datepicker>
+                <mat-datepicker-actions>
+                  <button mat-button matDatepickerCancel>Cancelar</button>
+                  <button mat-raised-button color="primary" matDatepickerApply>Aceptar</button>
+                </mat-datepicker-actions>
+              </mat-datepicker>
+            </mat-form-field>
+            <br>
+            <mat-form-field appearance="fill" class="example-form-field">
+              <mat-label>Especialidades</mat-label>
+              <mat-select [(value)]="esp">
+                <mat-option *ngFor="let especialidad of especialidades" [value]="especialidad.value">
+                  {{especialidad.value}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+            <br>
+            <mat-form-field appearance="fill" class="example-form-field">
+              <mat-label>Medico</mat-label>
+              <mat-select [(value)]="med">
+                <mat-option *ngFor="let medico of medicos" [value]="medico.value">
+                  {{medico.value}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button (click)="registrarCita()">Registrar Cita Medica</button>
+          <button mat-button (click)="volverLogin()">Regresar Inicio de Sesion</button>
+        </mat-card-actions>
+    </mat-card>
+</div>
