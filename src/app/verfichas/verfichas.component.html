@@ -7,11 +7,17 @@
         </mat-card-header>
         <mat-card-content>
           <p>Citas confirmadas</p>
-          <div style="width: 100%;" *ngFor="let cita of citasMedicas">
+          <div style="width: 100%;" *ngFor="let cita of citasMedicas | paginate: { itemsPerPage: cantidadItems, currentPage: paginaActual }">
             <mat-list>
                 <mat-list-item>{{"Paciente: "+cita.nombrePaciente + " en la fecha: " +cita.fecha}}</mat-list-item>
             </mat-list>
           </div>
+          <pagination-controls
+          (pageChange)="cambioPagina($event)" 
+          [responsive]="true"
+          previousLabel="Anterior"
+          nextLabel="Siguiente"
+          [maxSize]="10"></pagination-controls>
         </mat-card-content>
         <mat-card-actions>
           <button mat-button (click)="volverLogin()">Regresar Inicio de Sesion</button>
