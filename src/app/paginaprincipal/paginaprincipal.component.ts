@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-paginaprincipal',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PaginaprincipalComponent implements OnInit {
 
-  constructor() { }
+  constructor(public router: Router) { }
 
   ngOnInit(): void {
   }
-
+  irLogin(){
+    this.router.navigate(['inicioSesion']);
+  }
+  irRegistro(){
+    this.router.navigate(['registro']);
+  }
 }

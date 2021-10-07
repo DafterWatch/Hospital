@@ -3,7 +3,7 @@
         <mat-card-header>
           <div mat-card-avatar class="example-header-image"></div>
           <mat-card-title>Hospital</mat-card-title>
-          <mat-card-subtitle>Inicio de Sesión</mat-card-subtitle>
+          <mat-card-subtitle>Registro</mat-card-subtitle>
         </mat-card-header>
         <img mat-card-image src="assets/imagenlogin.jpg" alt="Photo of a Shiba Inu">
         <mat-card-content>
@@ -17,18 +17,32 @@
                 <button *ngIf="user" matSuffix mat-icon-button aria-label="Clear" (click)="user=''">
                   <mat-icon>close</mat-icon>
                 </button>
-              </mat-form-field>
-              <mat-form-field class="example-form-field" appearance="fill">
+            </mat-form-field>
+            <mat-form-field class="example-form-field" appearance="fill">
+                <mat-label>Correo</mat-label>
+                <input matInput type="email" [(ngModel)]="mail">
+                <button *ngIf="mail" matSuffix mat-icon-button aria-label="Clear" (click)="mail=''">
+                  <mat-icon>close</mat-icon>
+                </button>
+            </mat-form-field>
+            <mat-form-field class="example-form-field" appearance="fill">
                 <mat-label>Contraseña</mat-label>
                 <input matInput type="password" [(ngModel)]="pass">
                 <button *ngIf="pass" matSuffix mat-icon-button aria-label="Clear" (click)="pass=''">
                   <mat-icon>close</mat-icon>
                 </button>
               </mat-form-field>
+              <mat-form-field class="example-form-field" appearance="fill">
+                <mat-label>Repetir Contraseña</mat-label>
+                <input matInput type="password" [(ngModel)]="reppass">
+                <button *ngIf="reppass" matSuffix mat-icon-button aria-label="Clear" (click)="reppass=''">
+                  <mat-icon>close</mat-icon>
+                </button>
+              </mat-form-field>
           </div>
         </mat-card-content>
         <mat-card-actions>
-          <button mat-button (click)="iniciarSesion()">Iniciar Sesion</button>
+          <button mat-button (click)="registrarNuevoUsuario()">Registrar</button>
           <button mat-button (click)="volverInicio()">Volver a Inicio</button>
         </mat-card-actions>
     </mat-card>

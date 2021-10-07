@@ -40,7 +40,7 @@ export class VerfichasComponent implements OnInit {
     window.scroll(0,0);
   }
   volverLogin(){
-    this.router.navigate(['inicioSesion']);
+    this.router.navigate(['paginaPrincipal']);
   }
 }
 interface CitasMedicas{

@@ -27,4 +27,7 @@ export class LoginComponent implements OnInit {
       alert("Complete los datos");
     }
   }
+  volverInicio(){
+    this.router.navigate(['paginaPrincipal']);
+  }
 }

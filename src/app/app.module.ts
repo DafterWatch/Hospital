@@ -18,6 +18,10 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatSelectModule} from '@angular/material/select';
 import {MatListModule} from '@angular/material/list';
 import {NgxPaginationModule} from 'ngx-pagination';
+import { RegistroComponent } from './registro/registro.component';
+import {MatTabsModule} from '@angular/material/tabs';
+import {MatToolbarModule} from '@angular/material/toolbar';
+
 
 @NgModule({
   declarations: [
@@ -25,7 +29,8 @@ import {NgxPaginationModule} from 'ngx-pagination';
     PaginaprincipalComponent,
     LoginComponent,
     SacarfichasComponent,
-    VerfichasComponent
+    VerfichasComponent,
+    RegistroComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +45,9 @@ import {NgxPaginationModule} from 'ngx-pagination';
     MatDatepickerModule,
     MatSelectModule,
     MatListModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    MatTabsModule,
+    MatToolbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
