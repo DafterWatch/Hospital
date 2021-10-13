@@ -1,77 +1,109 @@
-<div style="width: 100%; height: 300px;">
-    <img src="assets/imagenprincipal.jpg" style="width: 100%; height: 100%;">
+<div class="header">
+    <img src="assets/imagenprincipal.jpg" style="height: 100%; width: 100%;">
+    <div id="textoImagen">Hospital General</div>
 </div>
-<mat-toolbar style="background-color: rgb(69, 116, 245); color: white;">
-    <span>Hospital</span>
-    <span class="example-spacer"></span>
-    <button mat-button style="background-color: white; color: rgb(42, 109, 252);" (click)="irLogin()">Iniciar Sesión</button>
-    &nbsp;
-    <button mat-button style="background-color: white; color: rgb(42, 109, 252);" (click)="irRegistro()">Registrarse</button>    
-</mat-toolbar>
-<mat-tab-group mat-align-tabs="center">
-    <mat-tab label="Inicio">
-        <div style="align-content: center; text-align: center; font-family: 'Comic Sans MS', 'Comic Sans', cursive; padding: 20px;">
-            <img src="assets/mision.jpg" style="width: 500px; height: 500px;">
-            <h1>Misión</h1>
-            <h3>Somos un Hospital de alta complejidad, con servicios médicos especializados y<br>
-                la formación académica de recursos humanos en salud integral y especializada,<br>
-                 beneficia a la salud de nuestra población.</h3>
-            <hr>
-            <img src="assets/vision.jpg" style="width: 500px; height: 500px;">
-            <h1>Visión</h1>
-            <h3>El año 2020 ser un Hospital moderno de tercer nivel de referencia departamental y<br> 
-                nacional, en la prestación de servicios especializados con inclusión y protección social a<br> 
-                la población en situación de riesgo en salud</h3>
-            <hr>
-            <img src="assets/objetivo.jpg" style="width: 500px; height: 500px;">
-            <h1>Objetivo</h1>
-            <h3>Brindar acceso al sistema de salud en sus diferentes niveles <br>
-                 especialidades con  atención integral de calidad y el acceso <br>
-                  de salud</h3>
-        </div>
-    </mat-tab>
-    <mat-tab label="Mensaje del director">
-        <div style="align-content: center; text-align: center; font-family: 'Comic Sans MS', 'Comic Sans', cursive; padding: 20px;">
-            Son 15 años desde que el Padre José inauguró el Hospital “Arco Iris”, con un sello social de colores, deberíamos responder por la <br>
-            atención en salud de la población más vulnerable y excluida de la ciudad de La Paz y de El Alto; “los niñ@s de y en la calle”. Este<br> 
-            mandato nos permitió entender el valor de la gente, nuestra misión y visión, la importancia vital de la ética, calidad y humanismo de <br>
-            nuestros servicios para convertirnos en un Hospital líquido, fluido, flexible y adaptarnos a las necesidades y a los procesos de transformación <br>
-            de nuestro país y de su gente; esto significó ir más allá de nuestras paredes, ponernos al servicio de los pacientes, de las redes de salud <br>
-            y del sistema de salud. Comprometiéndonos con las personas, familias, comunidad y la sociedad en su conjunto; compartiendo valores, buscando <br>
-            hacernos presente en la realidad médica, familiar y social de nuestro país. Por tanto nuestro Hospital se hace visible, no es evanescente ni “gaseoso”; <br>
-            se hace ágil, interactivo, comprometido con su trabajo y su responsabilidad con la gente; es un Ser liquido porque está constituido por seres <br>
-            humanos también líquidos; en un mundo de crisis permanente de sueños y expectativas, de incertidumbre y miedos, en el que nos podemos <br>
-            equivocar, pero que aprendemos de todo lo que hacemos, porque debemos ser humildes al momento de autoevaluarnos y hacer la lectura de los <br>
-            nuevos tiempos. De esta forma intentamos evitar el aspecto “solido“, petrificado, rígido, insensible y burocratizado del hospital tradicional. <br>
-            Somos un hospital orientado al paciente, que hace uso intensivo de las tecnologías de información y comunicación, que se reinventa todos los días, <br>
-            qué innova procesos y que no tiene miedo a los cambios y más bien los aprovecha para mejorar sus servicios en beneficio de nuestros <br>
-            pacientes y de la salud del país. En estos 15 años nos hemos transformado del hospital social de colores a un hospital líquido que sueñe <br>
-            con grandes cosas y con mejores días para la salud de nuestro país; compartiendo los valores de nuestro fundador el Padre José y poniendo siempre <br>
-            adelante nuestro compromiso con los más humildes y vulnerables sin perder de vista la sostenibilidad económica de la obra, porque no se <br>
-            puede “dar” de lo que “no se tiene”.<br>
-Dr. Ramiro Narváez Fernández
-
-        </div>    
-    </mat-tab>
-    <mat-tab label="Contactanos">
-        <div style="align-content: center; text-align: center; font-family: 'Comic Sans MS', 'Comic Sans', cursive; padding: 20px;">
-            <h1>Dirección</h1>
-            <h2>Calle Capitan Ravelo Nº 2180 Ciudad La Paz, La Paz, Bolivia<br>
-            Telefono: 2-22441749<br>
-            E-mail: central@sedeslapaz.gob.bo<br>
-            Website: https://www.sedeslapaz.gob.bo/<br></h2>
+<div class="navbar">
+    <div id="nameNav">
+    <span >Hospital General</span>    
+    <a (click)="irRegistro()" class="right">Registrarse</a>
+    <a (click)="irLogin()" class="right">Iniciar Sesión</a>
+    </div>
+  </div>    
+  <div id="section1">
+    <h1 class="subtitle">MISIÓN</h1>
+    <p>El Sedes La Paz ejerce la rectoría en el Sistema Departamental de Salud, 
+      promoviendo <br> el derecho de la población en el marco de la Política Departamental de <br> “SALUD PARA LA PAZ”, 
+      contribuyendo a mejorar la calidad de vida.
+    </p>
+    <div id="section1_2">      
+      <div id="section1_2_2">
+        <div >          
+          <img class="mobileCard" style="opacity: 1;" src="assets/mision.jpg" height="500" width="500"/>
+          <img  src="../../assets/images/MarcoMovil.png" height="500" width="500"/>          
         </div>        
-    </mat-tab>
-</mat-tab-group>
-<mat-toolbar style="background-color: rgb(69, 116, 245); color: white; height: 150px;">
-    <span>Hospital</span>
-    <span class="example-spacer"></span>
-    <h2>Calle Capitan Ravelo Nº 2180 Ciudad La Paz, La Paz, Bolivia<br>
-        Telefono: 2-22441749<br>
-        E-mail: central@sedeslapaz.gob.bo<br>
-        Website: https://www.sedeslapaz.gob.bo/<br></h2>
-    <span class="example-spacer"></span>
-    <button mat-button style="background-color: white; color: rgb(42, 109, 252);" (click)="irLogin()">Iniciar Sesión</button>
-    &nbsp;
-    <button mat-button style="background-color: white; color: rgb(42, 109, 252);" (click)="irRegistro()">Registrarse</button>    
-</mat-toolbar>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div id="section1">
+    <h1 class="subtitle">VISION</h1>
+    <p>El Sedes La Paz regula, implementa políticas, planes, programas y proyectos que contribuyan <br>
+      a la estructuración de redes funcionales de salud acreditadas con acciones de promoción, prevención<br>
+       con responsabilidad compartida en el marco de la “SALUD PARA LA PAZ CON TODOS”.
+    </p>
+    <div id="section1_2">      
+      <div id="section1_2_2">
+        <div >          
+          <img class="mobileCard" style="opacity: 1;" src="assets/vision.jpg" height="500" width="500"/>
+          <img  src="../../assets/images/MarcoMovil.png" height="500" width="500"/>          
+        </div>        
+      </div>
+    </div>
+  </div>
+  <div id="section_2">
+    <h1 class="subtittle_"> <strong>Objetivos</strong></h1>
+    <p class="paragraphs">Contribuir a mejorar la calidad de vida, la situación de salud y la inclusión social de la población del Departamento de La Paz, en el marco de la construcción de una sociedad saludable establecida en el pacto por La Paz.    </p>
+    <div class="advantages">
+      <div >
+        <mat-icon style="margin-left: -25px;">accessibility_new</mat-icon><br><br>
+        <h3 class="subtittle_" style="font-size: 18px;"> <strong>ACCESO AL SISTEMA ÚNICO DE SALUD UNIVERSAL Y GRATUITO/SAFCI</strong></h3>
+        <p class="paragraphs" style="font-size: 16px; margin-top: -5px; text-align: left;">
+          Mejorar la gestión de RRHH, infraestructura, equipamiento, de<br> las redes de  servicios de salud.
+        </p>
+      </div>
+      <div >
+        <mat-icon style="margin-left: -25px;">supervised_user_circle</mat-icon><br><br>
+        <h3 class="subtittle_" style="font-size: 18px;"> <strong>PROMOCIÓN DE LA SALUD Y PARTICIPACIÓN SOCIAL</strong></h3>
+        <p class="paragraphs" style="font-size: 16px; margin-top: -5px;">
+          Promover estilos de vida saludables, cambios de comportamiento y la <br>comunicación de saberes, prácticas y conocimientos.
+        </p>
+      </div>
+      <div >
+        <mat-icon style="margin-left: -25px;">list_alt</mat-icon><br><br>
+        <h3 class="subtittle_" style="font-size: 18px;"> <strong>SOBERANÍA Y RECTORÍA EN SALUD</strong></h3>
+        <p class="paragraphs" style="font-size: 16px; margin-top: -5px;"> 
+          Fortalecer la capacidad institucional para la planificación, programación, ejecución, seguimiento, evaluación, regulación, <br>
+          fiscalización, la gestión del financiamiento y el desarrollo organizacional.
+        </p>
+      </div>      
+    </div>
+  </div>
+    
+<div class="footer">
+  <div class="footer-content">
+    <div class="footer-section about" style="width: 25%;">
+      <br>
+      <br>
+      <span ><strong style="font-size: 45px; "> Hospital General </strong></span><br>
+      <p style="font-size: 25px; margin-top: 10px; line-height: 1.3;">
+        El Sedes La Paz ejerce la rectoría en el Sistema Departamental de Salud, <br>
+        promoviendo el derecho de la población en el marco de la Política Departamental<br>
+         de “SALUD PARA LA PAZ”, contribuyendo a mejorar la calidad de vida.
+    </p>    
+    </div>
+    <div class="footer-section links">
+      <br><br>
+      <span ><strong style="font-size: 45px;"> Contactanos </strong></span>
+      <br>
+      <br>
+      <ul>
+        <li><span style="font-size: 25px;">Calle Capitan Ravelo Nº 2180 Ciudad La Paz, La Paz, Bolivia</span></li><br>
+        <li><span style="font-size: 25px;">Telefono: 2-22441749</span></li><br>
+        <li><span style="font-size: 25px;">E-mail: central@sedeslapaz.gob.bo</span></li><br>
+        <li><span style="font-size: 25px;">Website: 
+          <a style="cursor: pointer;" href="https://www.sedeslapaz.gob.bo/" target="_blank">https://www.sedeslapaz.gob.bo/</a>
+        </span></li>    
+      </ul>
+    </div>
+    <div class="footer-section buttons">
+      <br><br>
+      <span ><strong style="font-size: 45px;"> Navegación </strong></span>      
+      <br>
+      <br>
+      <ul>
+        <li><a style="font-size: 25px;" (click)="irRegistro()"> Registrarse</a></li><br>
+        <li><a style="font-size: 25px;" (click)="irLogin()"> Iniciar Sesión</a></li>        
+      </ul>
+    </div>
+  </div>  
+</div>
