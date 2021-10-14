@@ -10,15 +10,21 @@ export class LoginComponent implements OnInit {
 
   constructor(public router: Router) { }
 
+  correoSession:any="";
+  contraSession:any="";
+
   ngOnInit(): void {
+    window.scroll(0,0);
+    this.correoSession = sessionStorage.getItem('correo');
+    this.contraSession = sessionStorage.getItem('contrasena');
   }
-  user = '';
+  mail = '';
   pass = '';
   iniciarSesion(){
-    if(this.user.length > 0 && this.pass.length > 0){
-      if(this.user == "medico"){
+    if(this.mail.length > 0 && this.pass.length > 0){
+      if(this.mail == "medico"){
         this.router.navigate(['verFichas']);
-      } else if(this.user == "usuario"){
+      } else if(this.mail == this.correoSession && this.pass == this.contraSession){
         this.router.navigate(['sacarFichas']);
       } else {
         alert("Esta cuenta no existe");

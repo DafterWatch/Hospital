@@ -67,6 +67,7 @@ body {
   background-color: rgb(69, 116, 245);
   position:sticky;
   top:0;
+  height: 100px;
 }
 
 /* Style the navigation bar links */
@@ -135,9 +136,9 @@ video {
   object-fit: fill;
 }
 #nameNav > span{
-  display: inline-block;
+  display: inline;
   color: white;
-  font-size: 30px;
+  font-size: 40px;
   margin: 15px;
 }
 #section1{

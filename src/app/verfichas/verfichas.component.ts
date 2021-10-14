@@ -12,6 +12,7 @@ export class VerfichasComponent implements OnInit {
   cantidadItems = 8;
   paginaActual = 1;
   ngOnInit(): void {
+    window.scroll(0,0);
   }
   citasMedicas:CitasMedicas[] = [
     {nombrePaciente:"Juan",fecha:"2021-06-10"},

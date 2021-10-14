@@ -13,6 +13,7 @@ export class SacarfichasComponent implements OnInit {
   esp:string = "";
   med:string = "";
   ngOnInit(): void {
+    window.scroll(0,0);
   }
   registrarCita(){
     console.log(this.fecha,this.esp,this.med);

@@ -1,10 +1,12 @@
 <div class="header">
     <img src="assets/imagenprincipal.jpg" style="height: 100%; width: 100%;">
-    <div id="textoImagen">Hospital<br><br><br><br><br><br><br><br><br><br><br><br><br> General</div>
+    <div id="textoImagen">Hospital de<br><br><br><br><br><br><br><br><br><br><br><br><br> Clinicas</div>
 </div>
 <div class="navbar">
+  
     <div id="nameNav">
-    <span >Hospital General</span>    
+    <img src="assets/icono.jpeg" style="border-radius: 50%; height: 100px; width: 100px; float:left"><br><br>
+    <span>Hospital de Clinicas</span>
     <a (click)="irRegistro()" class="right">Registrarse</a>
     <a (click)="irLogin()" class="right">Iniciar Sesión</a>
     </div>
@@ -19,10 +21,11 @@
       <div id="section1_2_2">
         <div >          
           <img class="mobileCard" style="opacity: 1;" src="assets/mision.jpg" height="500" width="500"/>
-          <img  src="../../assets/images/MarcoMovil.png" height="500" width="500"/>          
+          <img  src="../../assets/images/MarcoMovil.png" height="500" width="500"/>         
         </div>        
       </div>
     </div>
+    
   </div>
   <br>
   <div id="section1">
@@ -39,27 +42,32 @@
         </div>        
       </div>
     </div>
+    <br>
+    <br>
+    <owl-carousel-o [options]="customOptions" style="height: 500px; width: 500px;">
+      <ng-template carouselSlide><span style="font-size: 25px;">Hospital de clinicas</span><br><br><img src="assets/icono.jpeg" style="height: 100%; width: 100%;"></ng-template>  
+      <ng-template carouselSlide><span style="font-size: 25px;">Instalacion</span><br><br><img src="assets/imagen2.jpeg" style="height: 100%; width: 100%;"></ng-template>  
+      <ng-template carouselSlide><span style="font-size: 25px;">Vista de fuera</span><br><br><img src="assets/imagen1.jpeg" style="height: 100%; width: 100%;"></ng-template>  
+    </owl-carousel-o>
   </div>
+  <br><br><br>
   <div id="section_2">
     <h1 class="subtittle_"> <strong>Objetivos</strong></h1>
     <p class="paragraphs">Contribuir a mejorar la calidad de vida, la situación de salud y la inclusión social de la población del Departamento de La Paz, en el marco de la construcción de una sociedad saludable establecida en el pacto por La Paz.    </p>
     <div class="advantages">
       <div >
-        <mat-icon style="margin-left: -25px;">accessibility_new</mat-icon><br><br>
         <h3 class="subtittle_" style="font-size: 18px;"> <strong>ACCESO AL SISTEMA ÚNICO DE SALUD UNIVERSAL Y GRATUITO/SAFCI</strong></h3>
         <p class="paragraphs" style="font-size: 16px; margin-top: -5px; text-align: left;">
           Mejorar la gestión de RRHH, infraestructura, equipamiento, de<br> las redes de  servicios de salud.
         </p>
       </div>
       <div >
-        <mat-icon style="margin-left: -25px;">supervised_user_circle</mat-icon><br><br>
         <h3 class="subtittle_" style="font-size: 18px;"> <strong>PROMOCIÓN DE LA SALUD Y PARTICIPACIÓN SOCIAL</strong></h3>
         <p class="paragraphs" style="font-size: 16px; margin-top: -5px;">
           Promover estilos de vida saludables, cambios de comportamiento y la <br>comunicación de saberes, prácticas y conocimientos.
         </p>
       </div>
-      <div >
-        <mat-icon style="margin-left: -25px;">list_alt</mat-icon><br><br>
+      <div >        
         <h3 class="subtittle_" style="font-size: 18px;"> <strong>SOBERANÍA Y RECTORÍA EN SALUD</strong></h3>
         <p class="paragraphs" style="font-size: 16px; margin-top: -5px;"> 
           Fortalecer la capacidad institucional para la planificación, programación, ejecución, seguimiento, evaluación, regulación, <br>
@@ -72,9 +80,8 @@
 <div class="footer">
   <div class="footer-content">
     <div class="footer-section about" style="width: 25%;">
-      <br>
-      <br>
-      <span ><strong style="font-size: 25px; "> Hospital General </strong></span><br>
+      <img src="assets/icono.jpeg" height="100px" width="100px" style="border-radius: 50%;"/><br><br>
+      <span ><strong style="font-size: 25px; "> Hospital de Clinicas </strong></span><br>
       <p style="font-size: 15px; margin-top: 10px; line-height: 1.3;">
         El Sedes La Paz ejerce la rectoría en el Sistema Departamental de Salud.
     </p>    

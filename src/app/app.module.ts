@@ -21,7 +21,7 @@ import {NgxPaginationModule} from 'ngx-pagination';
 import { RegistroComponent } from './registro/registro.component';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatToolbarModule} from '@angular/material/toolbar';
-
+import { CarouselModule } from 'ngx-owl-carousel-o';
 
 @NgModule({
   declarations: [
@@ -29,7 +29,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     PaginaprincipalComponent,
     LoginComponent,
     SacarfichasComponent,
-    VerfichasComponent,
+    VerfichasComponent, 
     RegistroComponent
   ],
   imports: [
@@ -47,7 +47,8 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     MatListModule,
     NgxPaginationModule,
     MatTabsModule,
-    MatToolbarModule
+    MatToolbarModule,
+    CarouselModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
