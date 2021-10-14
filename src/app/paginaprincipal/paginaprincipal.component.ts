@@ -12,8 +12,6 @@ export class PaginaprincipalComponent implements OnInit {
 
   ngOnInit(): void {
     window.scroll(0,0);
-    this.correoSession = sessionStorage.getItem('correo');
-    this.contraSession = sessionStorage.getItem('contrasena');
   }
   irLogin(){
     this.router.navigate(['inicioSesion']);
@@ -38,7 +36,28 @@ export class PaginaprincipalComponent implements OnInit {
     },
     nav: true
   }
+  user = '';
+  pass = '';
+  reppass = '';
   mail = '';
+  registrarNuevoUsuario(){    
+    if(this.user.length>0 && this.pass.length>0 && this.reppass.length>0 && this.mail.length>0){
+      if(this.pass == this.reppass){  
+        sessionStorage.setItem('correo', this.mail);
+        sessionStorage.setItem('contrasena', this.pass);
+        this.user = "";
+        this.pass = "";
+        this.reppass = "";
+        this.mail = "";
+        alert("Se ha registrado un nuevo usuario");
+      } else {
+        alert("Las contraseñas no coinciden");
+      }
+    } else {
+      alert("Porfavor complete los campos vacios");
+    }
+  }
+  /*mail = '';
   pass = '';
   iniciarSesion(){
     if(this.mail.length > 0 && this.pass.length > 0){
@@ -52,5 +71,5 @@ export class PaginaprincipalComponent implements OnInit {
     } else {
       alert("Complete los datos");
     }
-  }
+  }*/
 }
