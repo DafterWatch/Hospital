@@ -12,6 +12,8 @@ export class PaginaprincipalComponent implements OnInit {
 
   ngOnInit(): void {
     window.scroll(0,0);
+    this.correoSession = sessionStorage.getItem('correo');
+    this.contraSession = sessionStorage.getItem('contrasena');
   }
   irLogin(){
     this.router.navigate(['inicioSesion']);
@@ -19,6 +21,8 @@ export class PaginaprincipalComponent implements OnInit {
   irRegistro(){
     this.router.navigate(['registro']);
   }
+  correoSession:any="";
+  contraSession:any="";
   customOptions: OwlOptions = {
     loop: true,
     mouseDrag: false,
@@ -33,5 +37,20 @@ export class PaginaprincipalComponent implements OnInit {
       }
     },
     nav: true
+  }
+  mail = '';
+  pass = '';
+  iniciarSesion(){
+    if(this.mail.length > 0 && this.pass.length > 0){
+      if(this.mail == "medico"){
+        this.router.navigate(['verFichas']);
+      } else if(this.mail == this.correoSession && this.pass == this.contraSession){
+        this.router.navigate(['sacarFichas']);
+      } else {
+        alert("Esta cuenta no existe");
+      }
+    } else {
+      alert("Complete los datos");
+    }
   }
 }

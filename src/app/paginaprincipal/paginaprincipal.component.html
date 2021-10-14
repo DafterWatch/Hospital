@@ -8,10 +8,46 @@
     <img src="assets/icono.jpeg" style="border-radius: 50%; height: 100px; width: 100px; float:left"><br><br>
     <span>Hospital de Clinicas</span>
     <a (click)="irRegistro()" class="right">Registrarse</a>
-    <a (click)="irLogin()" class="right">Iniciar Sesión</a>
+    <!--<a (click)="irLogin()" class="right">Iniciar Sesión</a>-->
     </div>
   </div>    
   <div id="section1">
+    
+    <mat-card class="example-card">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>Hospital de Clinicas</mat-card-title>
+        <mat-card-subtitle>Inicio de Sesión</mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image src="assets/imagenlogin.jpg" alt="Photo of a Shiba Inu">
+      <mat-card-content>
+        <p>
+          Complete los campos vacios
+        </p>
+        <div>
+          <mat-form-field class="example-form-field" appearance="fill">
+              <mat-label>Correo</mat-label>
+              <input matInput type="text" [(ngModel)]="mail">
+              <button *ngIf="mail" matSuffix mat-icon-button aria-label="Clear" (click)="mail=''">
+                <mat-icon>close</mat-icon>
+              </button>
+            </mat-form-field>
+            <mat-form-field class="example-form-field" appearance="fill">
+              <mat-label>Contraseña</mat-label>
+              <input matInput type="password" [(ngModel)]="pass">
+              <button *ngIf="pass" matSuffix mat-icon-button aria-label="Clear" (click)="pass=''">
+                <mat-icon>close</mat-icon>
+              </button>
+            </mat-form-field>
+        </div>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button (click)="iniciarSesion()">Iniciar Sesion</button>
+        <!--<button mat-button (click)="volverInicio()">Volver a Inicio</button>-->
+      </mat-card-actions>
+    </mat-card>
+    <br>
+
     <h1 class="subtitle">MISIÓN</h1>
     <p>El Sedes La Paz ejerce la rectoría en el Sistema Departamental de Salud, 
       promoviendo <br> el derecho de la población en el marco de la Política Departamental de <br> “SALUD PARA LA PAZ”, 
@@ -49,6 +85,9 @@
       <ng-template carouselSlide><span style="font-size: 25px;">Instalacion</span><br><br><img src="assets/imagen2.jpeg" style="height: 100%; width: 100%;"></ng-template>  
       <ng-template carouselSlide><span style="font-size: 25px;">Vista de fuera</span><br><br><img src="assets/imagen1.jpeg" style="height: 100%; width: 100%;"></ng-template>  
     </owl-carousel-o>
+
+    
+    
   </div>
   <br><br><br>
   <div id="section_2">
@@ -107,7 +146,7 @@
       <br>
       <ul>
         <li><a style="font-size: 15px; cursor: pointer;" (click)="irRegistro()"> Registrarse</a></li><br>
-        <li><a style="font-size: 15px; cursor: pointer;" (click)="irLogin()"> Iniciar Sesión</a></li>        
+        <!--<li><a style="font-size: 15px; cursor: pointer;" (click)="irLogin()"> Iniciar Sesión</a></li>-->
       </ul>
     </div>
   </div>  

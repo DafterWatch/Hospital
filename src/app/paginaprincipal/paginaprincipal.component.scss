@@ -324,3 +324,14 @@ a{
   text-decoration: none;
   color: #d3d3d3;
 }
+.example-card {
+  max-width: 600px;
+  margin: 0 auto;
+}
+.example-header-image {
+  background-image: 'assets/imagenlogin.jpg';
+  background-size: cover;
+}
+.example-form-field {
+  width: 100%;
+}
