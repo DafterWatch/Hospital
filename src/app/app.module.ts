@@ -22,6 +22,7 @@ import { RegistroComponent } from './registro/registro.component';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { CarouselModule } from 'ngx-owl-carousel-o';
+import { RegistromedicoComponent } from './registromedico/registromedico.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,7 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
     LoginComponent,
     SacarfichasComponent,
     VerfichasComponent, 
-    RegistroComponent
+    RegistroComponent, RegistromedicoComponent
   ],
   imports: [
     BrowserModule,
