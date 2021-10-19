@@ -3,8 +3,8 @@
   <div id="nameNav">
   <img src="assets/icono.jpeg" style="border-radius: 50%; height: 100px; width: 100px; float:left"><br><br>
   <span>Hospital de Clinicas</span>
-  <!--<a (click)="irRegistro()" class="right">Registrarse</a>-->
-  <!--<a (click)="irLogin()" class="right">Iniciar Sesión</a>-->
+  <a (click)="volverInicio()" class="right">Volver Pagina Principal</a>
+  <a (click)="irLogin()" class="right">Iniciar Sesión</a>
   </div>
 </div>    
 <div id="loginCss">
@@ -18,7 +18,11 @@
           <p>Citas confirmadas</p>
           <div style="width: 100%;" *ngFor="let cita of citasMedicas | paginate: { itemsPerPage: cantidadItems, currentPage: paginaActual }">
             <mat-list>
-                <mat-list-item>{{"Paciente: "+cita.nombrePaciente + " en la fecha: " +cita.fecha}}</mat-list-item>
+              <mat-list-item>
+                <span id="cita" (click)="irRegistroMedico(cita.nombre, cita.fecha, cita.edad, cita.sexo, cita.sintomas, cita.diagnostico, cita.doctor, cita.nregistro)">
+                  {{"Paciente: "+cita.nombre + " en la fecha: " +cita.fecha}}
+                </span>
+              </mat-list-item>
             </mat-list>
           </div>
           <pagination-controls
@@ -29,7 +33,7 @@
           [maxSize]="10"></pagination-controls>
         </mat-card-content>
         <mat-card-actions>
-          <button mat-button (click)="volverLogin()">Regresar Inicio</button>
+          <button mat-button (click)="volverInicio()">Regresar Inicio</button>
         </mat-card-actions>
     </mat-card>
 </div>

@@ -34,4 +34,7 @@ export class RegistroComponent implements OnInit {
   volverInicio(){
     this.router.navigate(['paginaPrincipal']);
   }
+  irLogin(){
+    this.router.navigate(['inicioSesion']);
+  }
 }

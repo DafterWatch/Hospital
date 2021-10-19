@@ -15,36 +15,66 @@ export class VerfichasComponent implements OnInit {
     window.scroll(0,0);
   }
   citasMedicas:CitasMedicas[] = [
-    {nombrePaciente:"Juan",fecha:"2021-06-10"},
-    {nombrePaciente:"Jose",fecha:"2021-07-10"},
-    {nombrePaciente:"Julian",fecha:"2021-08-10"},
-    {nombrePaciente:"Pepe",fecha:"2021-08-10"},
-    {nombrePaciente:"Roberto",fecha:"2021-08-10"},
-    {nombrePaciente:"David",fecha:"2021-08-10"},
-    {nombrePaciente:"Oscar",fecha:"2021-08-10"},
-    {nombrePaciente:"Obrero",fecha:"2021-08-10"},
-    {nombrePaciente:"Lopez",fecha:"2021-08-10"},
-    {nombrePaciente:"Manuel",fecha:"2021-08-10"},
-    {nombrePaciente:"Martin",fecha:"2021-08-10"},
-    {nombrePaciente:"Julian",fecha:"2021-08-10"},
-    {nombrePaciente:"Pepe",fecha:"2021-08-10"},
-    {nombrePaciente:"Juan",fecha:"2021-08-10"},
-    {nombrePaciente:"Miguel",fecha:"2021-08-10"},
-    {nombrePaciente:"Luis",fecha:"2021-08-10"},
-    {nombrePaciente:"Dylan",fecha:"2021-08-10"},
-    {nombrePaciente:"AAA",fecha:"2021-08-10"},
-    {nombrePaciente:"BBB",fecha:"2021-08-10"},
-    {nombrePaciente:"CCC",fecha:"2021-08-10"},
+    {
+      nombre:"Juan",
+      fecha:"2021-06-10",
+      edad:20,
+      sexo:"Masculino",
+      sintomas:"Tos, Gripe y resfrio grave",
+      diagnostico:"Enfermo por resfrio, posible covid",
+      doctor:"Carioca",
+      nregistro:1
+    },
+    {
+      nombre:"Paco",
+      fecha:"2021-18-10",
+      edad:20,
+      sexo:"Masculino",
+      sintomas:"Tos, Gripe y resfrio grave",
+      diagnostico:"Enfermo por resfrio, posible covid",
+      doctor:"Carioca",
+      nregistro:2
+    },
+    {
+      nombre:"Luis",
+      fecha:"2021-19-10",
+      edad:20,
+      sexo:"Masculino",
+      sintomas:"Tos, Gripe y resfrio grave",
+      diagnostico:"Enfermo por resfrio, posible covid",
+      doctor:"Carioca",
+      nregistro:3
+    },
   ];
   cambioPagina(evento:any){
     this.paginaActual = evento;
     window.scroll(0,0);
   }
-  volverLogin(){
+  irRegistroMedico(nombre:string, fecha:string, edad:number,sexo:string, sintomas:string, diagnostico: string, doctor:string, nregistro:number){
+    this.router.navigate(['registroMedico']);
+    sessionStorage.setItem('nombre', nombre);
+    sessionStorage.setItem('fecha', fecha);
+    sessionStorage.setItem('edad', edad.toString());
+    sessionStorage.setItem('sexo', sexo);
+    sessionStorage.setItem('sintomas', sintomas);
+    sessionStorage.setItem('diagnostico', diagnostico);
+    sessionStorage.setItem('doctor', doctor);
+    sessionStorage.setItem('nregistro', nregistro.toString());
+  }
+  volverInicio(){
     this.router.navigate(['paginaPrincipal']);
+  }
+  irLogin(){
+    this.router.navigate(['inicioSesion']);
   }
 }
 interface CitasMedicas{
-  nombrePaciente:string;
+  nombre:string;
   fecha: string;
+  edad: number;
+  sexo: string;
+  sintomas: string;
+  diagnostico: string;
+  doctor: string;
+  nregistro: number;
 }

@@ -33,8 +33,11 @@ export class SacarfichasComponent implements OnInit {
     {value: 'Dr. Paco'},
     {value: 'Dr. Luis'}
   ];
-  volverLogin(){
+  volverInicio(){
     this.router.navigate(['paginaPrincipal']);
+  }
+  irLogin(){
+    this.router.navigate(['inicioSesion']);
   }
 }
 interface Medicos {

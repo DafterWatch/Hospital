@@ -1,1 +1,67 @@
-<p>registromedico works!</p>
+<div class="navbar">
+  
+    <div id="nameNav">
+    <img src="assets/icono.jpeg" style="border-radius: 50%; height: 100px; width: 100px; float:left"><br><br>
+    <span>Hospital de Clinicas</span>    
+    <a (click)="volverCitasMedicas()" class="right">Volver Citas Medicas</a>
+    <a (click)="volverInicio()" class="right">Volver Pagina Principal</a>
+    <a (click)="irLogin()" class="right">Iniciar Sesión</a>
+    </div>
+</div>
+<div class="contenido">
+    <mat-grid-list cols="3" rowHeight="3:4">
+        <mat-grid-tile></mat-grid-tile>
+        <mat-grid-tile>
+
+
+            <form class="example-form">
+                <mat-form-field class="example-full-width" appearance="fill">
+                  <mat-label>Nombre</mat-label>
+                  <input matInput [value]="nombre">
+                </mat-form-field>
+              
+                <table class="example-full-width" cellspacing="0"><tr>
+                  <td><mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Edad</mat-label>
+                    <input matInput [value]="edad">
+                  </mat-form-field></td>
+                  <td><mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Sexo</mat-label>
+                    <input matInput [value]="sexo">
+                  </mat-form-field></td>
+                </tr></table>
+              
+                <p>
+                  <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Sintomas</mat-label>
+                    <textarea matInput [value]="sintomas"></textarea>
+                  </mat-form-field>
+                  <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Diagnostico</mat-label>
+                    <textarea matInput [value]="diagnosticoMedico"></textarea>
+                  </mat-form-field>
+                </p>
+              
+                <table class="example-full-width" cellspacing="0"><tr>
+                  <td><mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Doctor</mat-label>
+                    <input matInput [value]="doctor">
+                  </mat-form-field></td>
+                  <td><mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Fecha</mat-label>
+                    <input matInput [value]="fechaIngreso">
+                  </mat-form-field></td>
+                  <td><mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Registro Nº</mat-label>
+                    <input matInput [value]="nRegistro">
+                  </mat-form-field></td>
+                </tr></table>
+              </form>
+
+        </mat-grid-tile>
+        <mat-grid-tile></mat-grid-tile>
+      </mat-grid-list>
+    
+    
+
+</div>

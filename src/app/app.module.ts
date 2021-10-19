@@ -23,6 +23,8 @@ import {MatTabsModule} from '@angular/material/tabs';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { RegistromedicoComponent } from './registromedico/registromedico.component';
+import {MatGridListModule} from '@angular/material/grid-list';
+
 
 @NgModule({
   declarations: [
@@ -50,6 +52,7 @@ import { RegistromedicoComponent } from './registromedico/registromedico.compone
     MatTabsModule,
     MatToolbarModule,
     CarouselModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
