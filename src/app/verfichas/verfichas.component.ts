@@ -11,8 +11,10 @@ export class VerfichasComponent implements OnInit {
   constructor(public router: Router) { }
   cantidadItems = 8;
   paginaActual = 1;
+  cantidadCitas = 0;
   ngOnInit(): void {
     window.scroll(0,0);
+    this.cantidadCitas = this.citasMedicas.length;
   }
   citasMedicas:CitasMedicas[] = [
     {
