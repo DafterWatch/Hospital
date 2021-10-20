@@ -23,8 +23,10 @@ export class LoginComponent implements OnInit {
   iniciarSesion(){
     if(this.mail.length > 0 && this.pass.length > 0){
       if(this.mail == "medico"){
+        sessionStorage.setItem("usuario","Dr. Carioca");
         this.router.navigate(['verFichas']);
       } else if(this.mail == this.correoSession && this.pass == this.contraSession){
+        sessionStorage.setItem("usuario","Juan");
         this.router.navigate(['sacarFichas']);
       } else {
         alert("Esta cuenta no existe");

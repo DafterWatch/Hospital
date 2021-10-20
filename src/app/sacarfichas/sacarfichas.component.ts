@@ -12,8 +12,10 @@ export class SacarfichasComponent implements OnInit {
   constructor(public router: Router) { }
   esp:string = "";
   med:string = "";
+  usuario:any="";
   ngOnInit(): void {
     window.scroll(0,0);
+    this.usuario = sessionStorage.getItem("usuario");
   }
   registrarCita(){
     console.log(this.fecha,this.esp,this.med);

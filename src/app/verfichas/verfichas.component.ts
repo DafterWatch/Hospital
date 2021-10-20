@@ -12,9 +12,11 @@ export class VerfichasComponent implements OnInit {
   cantidadItems = 8;
   paginaActual = 1;
   cantidadCitas = 0;
+  usuario:any = "";
   ngOnInit(): void {
     window.scroll(0,0);
     this.cantidadCitas = this.citasMedicas.length;
+    this.usuario = sessionStorage.getItem("usuario");
   }
   citasMedicas:CitasMedicas[] = [
     {
